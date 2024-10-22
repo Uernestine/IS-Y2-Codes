@@ -1,0 +1,232 @@
+//Q1
+package mywork.mywork;
+import java.util.Scanner;
+public class EvenOdd {
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        if(num % 2 == 0)
+            System.out.println(num + " is even");
+        else
+            System.out.println(num + " is odd");
+    }
+}
+
+//Q2
+package mywork.mywork;
+
+import java.util.Scanner;
+
+public class Grade {
+   public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter your grade (A, B, C, D, F): ");
+        char grade = scanner.next().toUpperCase().charAt(0);
+        switch (grade)
+        {
+            case 'A':
+                System.out.println("Excellent");
+                break;
+            case 'B':
+                System.out.println("Very Good");
+                break;
+            case 'C':
+                System.out.println("Good");
+                break;
+            case 'D':
+                System.out.println("Fair");
+                break;
+            case 'F':
+                System.out.println("Fail");
+                break;
+        } 
+}
+}
+//Q3
+package mywork.mywork;
+import java.util.Scanner;
+public class LeapYear {
+   public static void main(String[] args){
+      int year;
+      System.out.println("Enter an Year :: ");
+      Scanner sc = new Scanner(System.in);
+      year = sc.nextInt();
+
+      if (((year % 4 == 0) && (year % 100!= 0)) || (year%400 == 0))
+         System.out.println("Specified year is a leap year");
+      else
+         System.out.println("Specified year is not a leap year");
+   }
+} 
+
+//Q4
+
+package mywork.mywork;
+import java.util.Scanner;
+public class LargestNum {
+    public static void main(String[] args)   
+{  
+int n1, n2, n3, largest;
+Scanner sc = new Scanner(System.in);  
+
+System.out.println("Enter the first number:");  
+n1= sc.nextInt();  
+System.out.println("Enter the second number:");  
+n2= sc.nextInt();  
+System.out.println("Enter the third number:");  
+n3 = sc.nextInt();  
+if( n1 >= n2 && n1 >= n3)
+            System.out.println(n1 + " is the largest number.");
+
+        else if (n2 >= n1 && n2>= n3)
+            System.out.println(n2+ " is the largest number.");
+
+        else
+            System.out.println(n3 + " is the largest number.");
+    }
+}
+//5
+package mywork.mywork;
+import java.util.Scanner;
+public class CheckNum {
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Input a number: ");
+        int n = sc.nextInt();
+
+        if (n > 0)
+        {
+            System.out.println("Number is positive");
+        }
+        else if (n < 0)
+        {
+            System.out.println("Number is negative");
+        }
+        else
+        {
+            System.out.println("Number is zero");
+        }
+    }
+}
+//Q6
+package mywork.mywork;
+public class NumberTriangle {
+    public static void main(String[] args) {
+        int rows = 7; 
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(i + " ");
+            }
+            System.out.println();
+        }
+    } 
+}
+//Q7
+package mywork.mywork;
+import java.util.Scanner;
+public class DiamondShape {
+ public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of rows for the diamond: ");
+        int rows = sc.nextInt(); 
+
+        
+        for (int i = 1; i <= rows; i++) {
+           
+            for (int j = i; j < rows; j++) {
+                System.out.print(" ");
+            }
+            
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                System.out.print("*");
+            }
+            
+            System.out.println();
+        }
+
+       
+        for (int i = rows - 1; i >= 1; i--) {
+          
+            for (int j = rows; j > i; j--) {
+                System.out.print(" ");
+            }
+           
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                System.out.print("*");
+            }
+          
+            System.out.println();
+        }
+
+        sc.close();
+    }   
+}
+//Q8
+package mywork.mywork;
+
+
+public class Average {
+   public static void main(String[] args) {
+        
+        int[] numbers = { 10,12,34,23,56,78 };
+        
+       
+        int sum = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+        
+      
+        double average = (double) sum / numbers.length;
+        
+        
+        System.out.printf("The average is: %.2f%n", average);
+    }
+}
+
+//
+package mywork.mywork;
+
+public class ReverseArray {
+     public static void main(String[] args) { 
+        int [] arr = new int [] {3,4,6,1,9,7,5,8};  
+        System.out.println("Original array: ");  
+        for (int i = 0; i < arr.length; i++) {  
+            System.out.print(arr[i] + " ");  
+        }  
+        System.out.println();  
+        System.out.println("Array in reverse order: ");    
+        for (int i = arr.length-1; i >= 0; i--) {  
+            System.out.print(arr[i] + " ");  
+        }  
+}
+}
+
+
+//Q10
+package mywork.mywork;
+
+
+public class LargestElement {
+    public static void main(String[] args) {  
+  
+
+        int [] arr = new int [] {34,23,12,45,67,89,234,26,10,30,43};  
+        
+        int max = arr[0];  
+        
+        for (int i = 0; i < arr.length; i++) {  
+            
+           if(arr[i] > max)  
+               max = arr[i];  
+        }  
+        System.out.println("Largest element present in given array: " + max);  
+    }  
+}
